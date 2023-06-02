@@ -1,0 +1,23 @@
+curl -fsSL https://get.docker.com -o get-docker.sh
+
+docker --version
+
+docker pull nginx
+
+docker pull jenkins/jenkins
+
+docker pull tomcat
+
+docker pull tomee
+
+docker run -name cont1 -p 7070:8080 -d tomee    (http://localhost:7070/)
+
+docker run -name cont2 -p 9090:8080 -d jenkins/jenkins
+
+docker run --name appserver -P -d nginx
+
+docker restart $(docker ps -aq)
+
+docker port appserver
+
+ 
